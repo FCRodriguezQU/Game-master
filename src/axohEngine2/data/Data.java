@@ -2,7 +2,7 @@
  * @author Travis R. Dewitt
  * @version 1.0
  * Date: June 15, 2015
- * 
+ * Test
  * Title: Data 
  * Description: Hold data from a game in variables for serializing later
  * 
@@ -25,6 +25,7 @@ public class Data implements Serializable {
 	private String _currentOverlayName;
 	private int _playerX;
 	private int _playerY;
+	private String name;
 	
 	//Method used to update the private variables
 	public void update(String currentMapName, String currentOverlayName, int playerX, int playerY){
@@ -60,5 +61,16 @@ public class Data implements Serializable {
 	 ***************************************************/
 	public int getPlayerY() {
 		return _playerY;
+	}
+	
+	public void setName(String n){
+		name = n.trim();
+	}
+	public String getName(){
+		return name;
+	}
+	public void setLocation(int x, int y){
+		_playerX = x;
+		_playerY = y;
 	}
 }
